@@ -35,7 +35,7 @@ while True:
     input_field = driver.find_element(By.XPATH,'//input[@placeholder="Paste file name here"]')
 
   # 최신 스크린샷 파일 이름 가져오기
-  folder_path = 스크린샷_저장_경로
+  folder_path = 스크린샷_저장_경로.replace('\\', '/')
   files = os.listdir(folder_path)
   paths = [os.path.join(folder_path, basename) for basename in files]
   if len(paths) > 0:
